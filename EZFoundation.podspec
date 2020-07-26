@@ -6,30 +6,21 @@
 #  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
 #
 
-Pod::Spec.new do |s|
+Pod::Spec.new do |spec|
 
-    s.name         = "EZFoundation"
-    s.version      = "1.0"
-    s.summary      = "EZFoundation is a bibrary for iOS project of Ezreal"
-    s.description  = 'foundation...'
+    spec.name         = 'EZFoundation'
+    spec.version      = '1.0'
+    spec.summary      = 'EZFoundation is a bibrary for iOS project of Ezreal'
+    spec.description  = 'extension'
     
-    s.homepage     = "https://github.com/Ezreal2852"
-    s.license      = "MIT"
-    s.author       = { "Ezreal" => "544881532@qq.com" }
+    spec.homepage     = 'https://github.com/Ezreal2852'
+    spec.license      = 'MIT'
+    spec.author       = { 'Ezreal' => '544881532@qq.com' }
     
-    s.source       = { :git => "https://github.com/Ezreal2852/EZFoundation.git", :tag => s.version.to_s }
+    spec.source       = { :git => 'https://github.com/Ezreal2852/EZFoundation.git', :tag => spec.version.to_s }
+    spec.source_files = 'EZFoundation/*.swift'
     
-    s.platform     = :ios, "10.0"
-    s.swift_version = "5.0"
+    spec.platform      = :ios, '10.0'
+    spec.swift_version = '5.0'
     
-    s.subspec "EZFoundation" do |ss|
-    
-    # extension
-    ss.subspec "extension" do |sss|
-    sss.source_files = "EZFoundation/extension/*.{h,m,swift}"
-    end
-    
-    end
-    
-    end
-    
+ end
