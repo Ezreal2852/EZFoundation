@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
   spec.license       = 'MIT'
   spec.author        = { 'Ezreal' => '544881532@qq.com' }
 
-  spec.source        = { :git => 'https://github.com/Ezreal2852/EZFoundation.git', :tag => 'v' + spec.version.to_s }
+  spec.source        = { git: 'https://github.com/Ezreal2852/EZFoundation.git', tag: 'v1.0' }
   spec.source_files  = 'EZFoundation/*.swift'
 
   spec.platform      = :ios, '10.0'
