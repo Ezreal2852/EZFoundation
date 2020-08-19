@@ -10,7 +10,6 @@ Pod::Spec.new do |spec|
   spec.name          = 'EZFoundation'
   spec.version       = '1.0'
   spec.summary       = 'EZFoundation is a bibrary for iOS project of Ezreal'
-  spec.description   = 'extension'
 
   spec.homepage      = 'https://github.com/Ezreal2852'
   spec.license       = 'MIT'
