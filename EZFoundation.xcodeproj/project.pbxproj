@@ -7,10 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77485B4A24ECC3F9001ED2A0 /* EZMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77485B4024ECC3F9001ED2A0 /* EZMetric.swift */; };
+		77485B4B24ECC3F9001ED2A0 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77485B4124ECC3F9001ED2A0 /* UIFont.swift */; };
+		77485B4C24ECC3F9001ED2A0 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77485B4224ECC3F9001ED2A0 /* UINavigationController.swift */; };
+		77485B4D24ECC3F9001ED2A0 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77485B4324ECC3F9001ED2A0 /* UIDevice.swift */; };
+		77485B4E24ECC3F9001ED2A0 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77485B4424ECC3F9001ED2A0 /* UIButton.swift */; };
+		77485B4F24ECC3F9001ED2A0 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77485B4524ECC3F9001ED2A0 /* String.swift */; };
+		77485B5024ECC3F9001ED2A0 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77485B4624ECC3F9001ED2A0 /* UIColor.swift */; };
+		77485B5124ECC3F9001ED2A0 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77485B4724ECC3F9001ED2A0 /* UIView.swift */; };
+		77485B5224ECC3F9001ED2A0 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77485B4824ECC3F9001ED2A0 /* Data.swift */; };
+		77485B5324ECC3F9001ED2A0 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77485B4924ECC3F9001ED2A0 /* UIApplication.swift */; };
 		77BD28AC24ECBF6F00B22AA9 /* EZFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 77BD28AA24ECBF6F00B22AA9 /* EZFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		77485B4024ECC3F9001ED2A0 /* EZMetric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EZMetric.swift; path = Source/EZMetric.swift; sourceTree = SOURCE_ROOT; };
+		77485B4124ECC3F9001ED2A0 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIFont.swift; path = Source/UIFont.swift; sourceTree = SOURCE_ROOT; };
+		77485B4224ECC3F9001ED2A0 /* UINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UINavigationController.swift; path = Source/UINavigationController.swift; sourceTree = SOURCE_ROOT; };
+		77485B4324ECC3F9001ED2A0 /* UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIDevice.swift; path = Source/UIDevice.swift; sourceTree = SOURCE_ROOT; };
+		77485B4424ECC3F9001ED2A0 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIButton.swift; path = Source/UIButton.swift; sourceTree = SOURCE_ROOT; };
+		77485B4524ECC3F9001ED2A0 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = Source/String.swift; sourceTree = SOURCE_ROOT; };
+		77485B4624ECC3F9001ED2A0 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = Source/UIColor.swift; sourceTree = SOURCE_ROOT; };
+		77485B4724ECC3F9001ED2A0 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = Source/UIView.swift; sourceTree = SOURCE_ROOT; };
+		77485B4824ECC3F9001ED2A0 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Data.swift; path = Source/Data.swift; sourceTree = SOURCE_ROOT; };
+		77485B4924ECC3F9001ED2A0 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIApplication.swift; path = Source/UIApplication.swift; sourceTree = SOURCE_ROOT; };
 		77BD28A724ECBF6F00B22AA9 /* EZFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EZFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77BD28AA24ECBF6F00B22AA9 /* EZFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EZFoundation.h; sourceTree = "<group>"; };
 		77BD28AB24ECBF6F00B22AA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -27,6 +47,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77485B3F24ECC3E8001ED2A0 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				77485B4824ECC3F9001ED2A0 /* Data.swift */,
+				77485B4024ECC3F9001ED2A0 /* EZMetric.swift */,
+				77485B4524ECC3F9001ED2A0 /* String.swift */,
+				77485B4924ECC3F9001ED2A0 /* UIApplication.swift */,
+				77485B4424ECC3F9001ED2A0 /* UIButton.swift */,
+				77485B4624ECC3F9001ED2A0 /* UIColor.swift */,
+				77485B4324ECC3F9001ED2A0 /* UIDevice.swift */,
+				77485B4124ECC3F9001ED2A0 /* UIFont.swift */,
+				77485B4224ECC3F9001ED2A0 /* UINavigationController.swift */,
+				77485B4724ECC3F9001ED2A0 /* UIView.swift */,
+			);
+			name = extension;
+			sourceTree = "<group>";
+		};
 		77BD289D24ECBF6F00B22AA9 = {
 			isa = PBXGroup;
 			children = (
@@ -46,6 +83,7 @@
 		77BD28A924ECBF6F00B22AA9 /* EZFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				77485B3F24ECC3E8001ED2A0 /* extension */,
 				77BD28AA24ECBF6F00B22AA9 /* EZFoundation.h */,
 				77BD28AB24ECBF6F00B22AA9 /* Info.plist */,
 			);
@@ -132,6 +170,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77485B5124ECC3F9001ED2A0 /* UIView.swift in Sources */,
+				77485B4F24ECC3F9001ED2A0 /* String.swift in Sources */,
+				77485B5024ECC3F9001ED2A0 /* UIColor.swift in Sources */,
+				77485B4E24ECC3F9001ED2A0 /* UIButton.swift in Sources */,
+				77485B4C24ECC3F9001ED2A0 /* UINavigationController.swift in Sources */,
+				77485B4B24ECC3F9001ED2A0 /* UIFont.swift in Sources */,
+				77485B4A24ECC3F9001ED2A0 /* EZMetric.swift in Sources */,
+				77485B5224ECC3F9001ED2A0 /* Data.swift in Sources */,
+				77485B5324ECC3F9001ED2A0 /* UIApplication.swift in Sources */,
+				77485B4D24ECC3F9001ED2A0 /* UIDevice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
