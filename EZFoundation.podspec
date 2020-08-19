@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |spec|
-  spec.name = 'EZFoundation'
+  spec.name          = 'EZFoundation'
   spec.version       = '1.0'
   spec.summary       = 'EZFoundation is a bibrary for iOS project of Ezreal'
   spec.description   = 'extension'
@@ -17,8 +17,11 @@ Pod::Spec.new do |spec|
   spec.author        = { 'Ezreal' => '544881532@qq.com' }
 
   spec.source        = { git: 'https://github.com/Ezreal2852/EZFoundation.git', tag: spec.version.to_s }
-  spec.source_files  = 'Source/*.{h,m,swift}'
+  spec.source_files  = 'EZFoundation/extension/*.swift'
 
   spec.platform      = :ios, '10.0'
   spec.swift_version = '5.0'
+
+  spec.framework     = 'Foundation'
+  spec.ios.framework = 'UIKit'
 end
