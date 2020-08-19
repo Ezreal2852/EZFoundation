@@ -66,6 +66,16 @@
 		77BD28A924ECBF6F00B22AA9 /* EZFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				77DC408724ECD40300EDB438 /* extension */,
+				77BD28AA24ECBF6F00B22AA9 /* EZFoundation.h */,
+				77BD28AB24ECBF6F00B22AA9 /* Info.plist */,
+			);
+			path = EZFoundation;
+			sourceTree = "<group>";
+		};
+		77DC408724ECD40300EDB438 /* extension */ = {
+			isa = PBXGroup;
+			children = (
 				77485B7524ECC630001ED2A0 /* UIView.swift */,
 				77485B7624ECC630001ED2A0 /* Data.swift */,
 				77485B7724ECC630001ED2A0 /* UIColor.swift */,
@@ -76,10 +86,8 @@
 				77485B7C24ECC630001ED2A0 /* UIApplication.swift */,
 				77485B7D24ECC630001ED2A0 /* UINavigationController.swift */,
 				77485B7E24ECC630001ED2A0 /* EZMetric.swift */,
-				77BD28AA24ECBF6F00B22AA9 /* EZFoundation.h */,
-				77BD28AB24ECBF6F00B22AA9 /* Info.plist */,
 			);
-			path = EZFoundation;
+			name = extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
