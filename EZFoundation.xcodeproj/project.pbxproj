@@ -47,23 +47,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		77485B7424ECC630001ED2A0 /* extension */ = {
-			isa = PBXGroup;
-			children = (
-				77485B7524ECC630001ED2A0 /* UIView.swift */,
-				77485B7624ECC630001ED2A0 /* Data.swift */,
-				77485B7724ECC630001ED2A0 /* UIColor.swift */,
-				77485B7824ECC630001ED2A0 /* UIDevice.swift */,
-				77485B7924ECC630001ED2A0 /* String.swift */,
-				77485B7A24ECC630001ED2A0 /* UIButton.swift */,
-				77485B7B24ECC630001ED2A0 /* UIFont.swift */,
-				77485B7C24ECC630001ED2A0 /* UIApplication.swift */,
-				77485B7D24ECC630001ED2A0 /* UINavigationController.swift */,
-				77485B7E24ECC630001ED2A0 /* EZMetric.swift */,
-			);
-			path = extension;
-			sourceTree = "<group>";
-		};
 		77BD289D24ECBF6F00B22AA9 = {
 			isa = PBXGroup;
 			children = (
@@ -83,7 +66,16 @@
 		77BD28A924ECBF6F00B22AA9 /* EZFoundation */ = {
 			isa = PBXGroup;
 			children = (
-				77485B7424ECC630001ED2A0 /* extension */,
+				77485B7524ECC630001ED2A0 /* UIView.swift */,
+				77485B7624ECC630001ED2A0 /* Data.swift */,
+				77485B7724ECC630001ED2A0 /* UIColor.swift */,
+				77485B7824ECC630001ED2A0 /* UIDevice.swift */,
+				77485B7924ECC630001ED2A0 /* String.swift */,
+				77485B7A24ECC630001ED2A0 /* UIButton.swift */,
+				77485B7B24ECC630001ED2A0 /* UIFont.swift */,
+				77485B7C24ECC630001ED2A0 /* UIApplication.swift */,
+				77485B7D24ECC630001ED2A0 /* UINavigationController.swift */,
+				77485B7E24ECC630001ED2A0 /* EZMetric.swift */,
 				77BD28AA24ECBF6F00B22AA9 /* EZFoundation.h */,
 				77BD28AB24ECBF6F00B22AA9 /* Info.plist */,
 			);
