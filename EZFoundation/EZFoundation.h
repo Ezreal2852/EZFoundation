@@ -2,8 +2,8 @@
 //  EZFoundation.h
 //  EZFoundation
 //
-//  Created by Ezreal on 2020/7/25.
-//  Copyright © 2020 Ezeal. All rights reserved.
+//  Created by Ezreal on 2020/8/19.
+//  Copyright © 2020 Ezreal. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

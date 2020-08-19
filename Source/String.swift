@@ -15,7 +15,7 @@ public extension String {
      "stl"[stl: 1] -> "t"
      "stl"[stl: 3] -> nil
      */
-    subscript(stl index: Int) -> String? {
+    subscript(ez index: Int) -> String? {
         guard index >= 0 && index < count else { return nil }
         return String(self[self.index(startIndex, offsetBy: index)])
     }
