@@ -19,10 +19,23 @@ public extension UIApplication {
             } else if let presented = current?.presentedViewController {
                 current = presented
             } else {
-                break
+                return current
             }
         }
-        return current
+    }
+    
+    static var ez_keyWindow: UIWindow? {
+        if #available(iOS 13.0.0, *) {
+            return shared.connectedScenes
+                .filter { $0.activationState == .foregroundActive }
+                .compactMap { $0 as? UIWindowScene }
+                .first?
+                .windows
+                .filter({ $0.isKeyWindow })
+                .first
+        } else {
+            return shared.keyWindow
+        }
     }
     
     /// APP名称

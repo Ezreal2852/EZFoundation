@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7729A32E24F49ABC00388FEE /* UIConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7729A32D24F49ABC00388FEE /* UIConvenience.swift */; };
+		7729A33024F49C8A00388FEE /* EZTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7729A32F24F49C8A00388FEE /* EZTextView.swift */; };
 		77485B7F24ECC630001ED2A0 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77485B7524ECC630001ED2A0 /* UIView.swift */; };
 		77485B8024ECC630001ED2A0 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77485B7624ECC630001ED2A0 /* Data.swift */; };
 		77485B8124ECC630001ED2A0 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77485B7724ECC630001ED2A0 /* UIColor.swift */; };
@@ -18,9 +20,13 @@
 		77485B8724ECC630001ED2A0 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77485B7D24ECC630001ED2A0 /* UINavigationController.swift */; };
 		77485B8824ECC630001ED2A0 /* EZMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77485B7E24ECC630001ED2A0 /* EZMetric.swift */; };
 		77BD28AC24ECBF6F00B22AA9 /* EZFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 77BD28AA24ECBF6F00B22AA9 /* EZFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77D56E1624F8D0DF0005CDCD /* Swizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D56E1524F8D0DF0005CDCD /* Swizzling.swift */; };
+		77D56E1824F8D1030005CDCD /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D56E1724F8D1030005CDCD /* DispatchQueue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7729A32D24F49ABC00388FEE /* UIConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIConvenience.swift; sourceTree = "<group>"; };
+		7729A32F24F49C8A00388FEE /* EZTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EZTextView.swift; sourceTree = "<group>"; };
 		77485B7524ECC630001ED2A0 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		77485B7624ECC630001ED2A0 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		77485B7724ECC630001ED2A0 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -34,6 +40,8 @@
 		77BD28A724ECBF6F00B22AA9 /* EZFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EZFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77BD28AA24ECBF6F00B22AA9 /* EZFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EZFoundation.h; sourceTree = "<group>"; };
 		77BD28AB24ECBF6F00B22AA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77D56E1524F8D0DF0005CDCD /* Swizzling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swizzling.swift; sourceTree = "<group>"; };
+		77D56E1724F8D1030005CDCD /* DispatchQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7729A33224F49CCC00388FEE /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				7729A32F24F49C8A00388FEE /* EZTextView.swift */,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
 		77BD289D24ECBF6F00B22AA9 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +82,8 @@
 		77BD28A924ECBF6F00B22AA9 /* EZFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				77D56E0A24F8B42E0005CDCD /* util */,
+				7729A33224F49CCC00388FEE /* ui */,
 				77DC408724ECD40300EDB438 /* extension */,
 				77BD28AA24ECBF6F00B22AA9 /* EZFoundation.h */,
 				77BD28AB24ECBF6F00B22AA9 /* Info.plist */,
@@ -73,19 +91,29 @@
 			path = EZFoundation;
 			sourceTree = "<group>";
 		};
+		77D56E0A24F8B42E0005CDCD /* util */ = {
+			isa = PBXGroup;
+			children = (
+				77D56E1524F8D0DF0005CDCD /* Swizzling.swift */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
 		77DC408724ECD40300EDB438 /* extension */ = {
 			isa = PBXGroup;
 			children = (
-				77485B7524ECC630001ED2A0 /* UIView.swift */,
 				77485B7624ECC630001ED2A0 /* Data.swift */,
-				77485B7724ECC630001ED2A0 /* UIColor.swift */,
-				77485B7824ECC630001ED2A0 /* UIDevice.swift */,
-				77485B7924ECC630001ED2A0 /* String.swift */,
-				77485B7A24ECC630001ED2A0 /* UIButton.swift */,
-				77485B7B24ECC630001ED2A0 /* UIFont.swift */,
-				77485B7C24ECC630001ED2A0 /* UIApplication.swift */,
-				77485B7D24ECC630001ED2A0 /* UINavigationController.swift */,
 				77485B7E24ECC630001ED2A0 /* EZMetric.swift */,
+				77485B7924ECC630001ED2A0 /* String.swift */,
+				77485B7C24ECC630001ED2A0 /* UIApplication.swift */,
+				77485B7A24ECC630001ED2A0 /* UIButton.swift */,
+				77485B7724ECC630001ED2A0 /* UIColor.swift */,
+				7729A32D24F49ABC00388FEE /* UIConvenience.swift */,
+				77485B7824ECC630001ED2A0 /* UIDevice.swift */,
+				77485B7B24ECC630001ED2A0 /* UIFont.swift */,
+				77485B7D24ECC630001ED2A0 /* UINavigationController.swift */,
+				77485B7524ECC630001ED2A0 /* UIView.swift */,
+				77D56E1724F8D1030005CDCD /* DispatchQueue.swift */,
 			);
 			name = extension;
 			sourceTree = "<group>";
@@ -173,10 +201,14 @@
 				77485B8824ECC630001ED2A0 /* EZMetric.swift in Sources */,
 				77485B8624ECC630001ED2A0 /* UIApplication.swift in Sources */,
 				77485B7F24ECC630001ED2A0 /* UIView.swift in Sources */,
+				7729A32E24F49ABC00388FEE /* UIConvenience.swift in Sources */,
+				7729A33024F49C8A00388FEE /* EZTextView.swift in Sources */,
+				77D56E1824F8D1030005CDCD /* DispatchQueue.swift in Sources */,
 				77485B8124ECC630001ED2A0 /* UIColor.swift in Sources */,
 				77485B8324ECC630001ED2A0 /* String.swift in Sources */,
 				77485B8524ECC630001ED2A0 /* UIFont.swift in Sources */,
 				77485B8024ECC630001ED2A0 /* Data.swift in Sources */,
+				77D56E1624F8D0DF0005CDCD /* Swizzling.swift in Sources */,
 				77485B8724ECC630001ED2A0 /* UINavigationController.swift in Sources */,
 				77485B8224ECC630001ED2A0 /* UIDevice.swift in Sources */,
 				77485B8424ECC630001ED2A0 /* UIButton.swift in Sources */,

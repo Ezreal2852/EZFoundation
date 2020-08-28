@@ -14,7 +14,11 @@ public extension UIDevice {
     /// 是全面屏吗？
     static var ez_isX: Bool {
         if #available(iOS 11.0.0, *) {
-            return (UIApplication.shared.delegate?.window??.safeAreaInsets.bottom ?? 34) > 0
+            // FIXME: iOS 13 Scene bug
+            if let safeAreaInsets = UIApplication.shared.keyWindow?.safeAreaInsets,
+                safeAreaInsets.bottom > 0 {
+                return true
+            }
         }
         return false
     }
@@ -144,7 +148,7 @@ public extension UIDevice {
      info.plist -> Supported interface orientations
      UIApplicationDelegate -> supportedInterfaceOrientationsFor
      */
-    static func setOrientation(_ orientation: UIInterfaceOrientation) {
+    static func ez_setOrientation(_ orientation: UIInterfaceOrientation) {
         current.setValue(Int(UIInterfaceOrientation.unknown.rawValue), forKey: kOrientation)
         current.setValue(Int(orientation.rawValue), forKey: kOrientation)
     }
