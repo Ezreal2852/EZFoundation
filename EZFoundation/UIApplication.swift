@@ -8,9 +8,18 @@
 
 public extension UIApplication {
     
+    /// 主窗口（适配iOS13多场景）
+    static var ez_keyWindow: UIWindow? {
+        if #available(iOS 13.0.0, *) {
+            return UIApplication.shared.windows.filter { $0.isKeyWindow }.first
+        } else {
+            return UIApplication.shared.keyWindow
+        }
+    }
+    
     /// 顶层可见控制器
     static var ez_topViewController: UIViewController? {
-        var current: UIViewController? = UIApplication.shared.delegate?.window??.rootViewController
+        var current: UIViewController? = ez_keyWindow?.rootViewController
         while true {
             if let tab = current as? UITabBarController {
                 current = tab.selectedViewController
@@ -21,20 +30,6 @@ public extension UIApplication {
             } else {
                 return current
             }
-        }
-    }
-    
-    static var ez_keyWindow: UIWindow? {
-        if #available(iOS 13.0.0, *) {
-            return shared.connectedScenes
-                .filter { $0.activationState == .foregroundActive }
-                .compactMap { $0 as? UIWindowScene }
-                .first?
-                .windows
-                .filter({ $0.isKeyWindow })
-                .first
-        } else {
-            return shared.keyWindow
         }
     }
     

@@ -63,11 +63,11 @@ public extension EZMetric {
     
     static var ez_safeAreaInsets: UIEdgeInsets {
         if #available(iOS 11.0.0, *) {
-            // FIXME: iOS 13 Scene bug
-            return UIApplication.shared.keyWindow?.safeAreaInsets ?? .zero
-        } else {
-            return .zero
+            if let safeAreaInsets = UIApplication.ez_keyWindow?.safeAreaInsets {
+                return safeAreaInsets
+            }
         }
+        return .zero
     }
     static var ez_safeTopInset: CGFloat { ez_safeAreaInsets.top }
     static var ez_safeBottomInset: CGFloat { ez_safeAreaInsets.bottom }
