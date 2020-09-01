@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7723F11724FE15FE00112FA3 /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7723F11624FE15FE00112FA3 /* Debouncer.swift */; };
 		7729A32E24F49ABC00388FEE /* UIConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7729A32D24F49ABC00388FEE /* UIConvenience.swift */; };
 		7729A33024F49C8A00388FEE /* EZTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7729A32F24F49C8A00388FEE /* EZTextView.swift */; };
 		77485B7F24ECC630001ED2A0 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77485B7524ECC630001ED2A0 /* UIView.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7723F11624FE15FE00112FA3 /* Debouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
 		7729A32D24F49ABC00388FEE /* UIConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIConvenience.swift; sourceTree = "<group>"; };
 		7729A32F24F49C8A00388FEE /* EZTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EZTextView.swift; sourceTree = "<group>"; };
 		77485B7524ECC630001ED2A0 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				77D56E1524F8D0DF0005CDCD /* Swizzling.swift */,
+				7723F11624FE15FE00112FA3 /* Debouncer.swift */,
 			);
 			name = util;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				77D56E1824F8D1030005CDCD /* DispatchQueue.swift in Sources */,
 				77485B8124ECC630001ED2A0 /* UIColor.swift in Sources */,
 				77485B8324ECC630001ED2A0 /* String.swift in Sources */,
+				7723F11724FE15FE00112FA3 /* Debouncer.swift in Sources */,
 				77485B8524ECC630001ED2A0 /* UIFont.swift in Sources */,
 				77485B8024ECC630001ED2A0 /* Data.swift in Sources */,
 				77D56E1624F8D0DF0005CDCD /* Swizzling.swift in Sources */,
