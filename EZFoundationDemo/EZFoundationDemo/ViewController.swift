@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Demo
+//  EZFoundationDemo
 //
 //  Created by 刘嘉豪 on 2022/6/1.
 //
