@@ -8,11 +8,11 @@
 
 import Foundation
 
-public extension DispatchQueue {
+extension DispatchQueue {
     
     private static var _onceTracker: [String] = []
     
-    class func ez_once(_ token: String, execute: () -> Void) {
+    public static func ez_once(_ token: String = UUID().uuidString, execute: () -> Void) {
         
         objc_sync_enter(self)
         defer { objc_sync_exit(self) }

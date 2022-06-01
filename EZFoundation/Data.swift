@@ -15,18 +15,17 @@ public enum EZImageFormat {
     case webp
 }
 
-public extension Data {
+extension Data {
     
     /// 根据二进制头数据获得图片格式
-    var ez_imageFormat: EZImageFormat {
+    public var ez_imageFormat: EZImageFormat {
         
         guard count > 8 else { return .unknown }
         
         var buffer = [UInt8](repeating: 0, count: 8)
         copyBytes(to: &buffer, count: 8)
         
-        if
-            buffer == Header.PNG {
+        if buffer == Header.PNG {
             return .png
         } else if
             buffer[0] == Header.JPEG_SOI[0],
@@ -55,13 +54,13 @@ public extension Data {
     private var isWebp: Bool {
         
         if count < 12 { return false }
-
+        
         let endIndex = index(startIndex, offsetBy: 12)
         let testData = subdata(in: startIndex..<endIndex)
         guard let testString = String(data: testData, encoding: .ascii) else {
             return false
         }
-
+        
         return testString.hasPrefix("RIFF") && testString.hasSuffix("WEBP")
     }
 }
