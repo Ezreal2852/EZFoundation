@@ -14,9 +14,7 @@ public extension UIDevice {
     /// 是全面屏吗？
     static var ez_isX: Bool {
         if #available(iOS 11.0.0, *) {
-            // FIXME: iOS 13 Scene bug
-            if let safeAreaInsets = UIApplication.shared.keyWindow?.safeAreaInsets,
-                safeAreaInsets.bottom > 0 {
+            if let safeAreaInsets = UIApplication.ez_keyWindow?.safeAreaInsets, safeAreaInsets.bottom > 0 {
                 return true
             }
         }
