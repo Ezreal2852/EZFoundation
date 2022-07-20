@@ -47,4 +47,14 @@ public extension UIApplication {
     static var ez_bundleBuild: String? {
         Bundle.main.infoDictionary?["CFBundleVersion"] as? String
     }
+    
+    /// 挂起（进入后台）
+    static func suspend() {
+        DispatchQueue.main.async {
+            let selector = #selector(NSXPCConnection.suspend)
+            if shared.responds(to: selector) {
+                shared.perform(selector)
+            }
+        }
+    }
 }
