@@ -1,5 +1,5 @@
 //
-//  Operator.swift
+//  Operators.swift
 //  EZFoundation
 //
 //  Created by 刘嘉豪 on 2022/8/10.
