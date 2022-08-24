@@ -8,6 +8,10 @@
 
 import Foundation
 
+/// 方法交换
+/// - Parameters:
+///   - original: (原类, 原方法)
+///   - swizzled: (目标类, 目标方法)
 public func ez_swizzle(original: (cls: AnyClass, sel: Selector), swizzled: (cls: AnyClass, sel: Selector)) {
     
     guard let originalMethod = class_getInstanceMethod(original.cls, original.sel),

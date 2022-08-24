@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// 自带placeholder的派生TextView
 @IBDesignable
 open class EZTextView: UITextView {
     
