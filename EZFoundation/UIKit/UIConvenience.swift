@@ -199,3 +199,20 @@ public extension UICollectionView {
         registerViews.forEach { self.register($0.0, forSupplementaryViewOfKind: $0.1, withReuseIdentifier: $0.2) }
     }
 }
+
+public extension UIStackView {
+    
+    convenience init(arrangedSubviews views: [UIView] = [],
+                     axis: NSLayoutConstraint.Axis = .horizontal,
+                     distribution: UIStackView.Distribution = .equalSpacing,
+                     alignment: UIStackView.Alignment = .center,
+                     spacing: CGFloat = 0) {
+        
+        self.init(arrangedSubviews: views)
+        
+        self.axis = axis
+        self.distribution = distribution
+        self.alignment = alignment
+        self.spacing = spacing
+    }
+}
