@@ -3,7 +3,7 @@
 //  EZFoundation
 //
 //  Created by Ezreal on 2019/4/1.
-//  Copyright © 2019 bailun. All rights reserved.
+//  Copyright © 2019 EZ. All rights reserved.
 //
 
 import UIKit

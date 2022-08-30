@@ -12,8 +12,8 @@ public extension String {
     
     /**
      下标
-     "stl"[stl: 1] -> "t"
-     "stl"[stl: 3] -> nil
+     "ez"[ez: 1] -> "t"
+     "ez"[ez: 3] -> nil
      */
     subscript(ez index: Int) -> String? {
         guard index >= 0 && index < count else { return nil }

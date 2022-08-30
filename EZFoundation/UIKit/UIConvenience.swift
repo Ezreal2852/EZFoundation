@@ -3,17 +3,50 @@
 //  Common
 //
 //  Created by Ezreal on 2019/11/11.
-//  Copyright © 2019 bailun. All rights reserved.
+//  Copyright © 2019 EZ. All rights reserved.
 //  通过 style: font&color 设计统一构造器来统一风格，精简UI init代码
 //  所有属性默认都为可选且默认值为nil，所有数组全部默认为[]
 
 public extension UIView {
     
-    convenience init(backgroundColor: UIColor? = nil) {
-        
-        self.init()
-        
-        self.backgroundColor = backgroundColor
+    func ez_backgroundColor(_ value: UIColor?) -> Self {
+        backgroundColor = value
+        return self
+    }
+    
+    func ez_cornerRadius(_ value: CGFloat) -> Self {
+        ez_cornerRadius = value
+        return self
+    }
+    
+    func ez_borderWidth(_ value: CGFloat) -> Self {
+        ez_borderWidth = value
+        return self
+    }
+    
+    func ez_borderColor(_ value: UIColor?) -> Self {
+        ez_borderColor = value
+        return self
+    }
+    
+    func ez_shadowColor(_ value: UIColor?) -> Self {
+        ez_shadowColor = value
+        return self
+    }
+    
+    func ez_shadowOffset(_ value: CGSize) -> Self {
+        ez_shadowOffset = value
+        return self
+    }
+    
+    func ez_shadowOpacity(_ value: Float) -> Self {
+        ez_shadowOpacity = value
+        return self
+    }
+    
+    func ez_shadowRadius(_ value: CGFloat) -> Self {
+        ez_shadowRadius = value
+        return self
     }
 }
 
@@ -38,16 +71,14 @@ public extension UILabel {
 public extension UIButton {
     
     convenience init(font: UIFont? = nil,
-                     backgroundColor: UIColor? = nil,
                      targetAction:(Any?, Selector)? = nil,
-                     titleStates: [(String?, UIControl.State)] = [],
-                     titleColorStates: [(UIColor?, UIControl.State)] = [],
-                     imageStates: [(UIImage?, UIControl.State)] = [],
-                     backgroundImageStates: [(UIImage?, UIControl.State)] = []) {
+                     titleStates: (String?, UIControl.State)...,
+                     titleColorStates: (UIColor?, UIControl.State)...,
+                     imageStates: (UIImage?, UIControl.State)...,
+                     backgroundImageStates: (UIImage?, UIControl.State)...) {
         
         self.init()
         
-        self.backgroundColor = backgroundColor
         if let font = font { self.titleLabel?.font = font }
         if let targetAction = targetAction { self.addTarget(targetAction.0, action: targetAction.1, for: .touchUpInside) }
         
@@ -108,8 +139,8 @@ public extension UITableView {
     convenience init(style: UITableView.Style = .plain,
                      dataSource: UITableViewDataSource? = nil,
                      delegate: UITableViewDelegate? = nil,
-                     registerCells: [(AnyClass?, String)] = [],
-                     registerViews: [(AnyClass?, String)] = []) {
+                     registerCells: (AnyClass?, String)...,
+                     registerViews: (AnyClass?, String)...) {
         
         self.init(frame: .zero, style: style)
         
@@ -154,8 +185,8 @@ public extension UICollectionView {
     convenience init(layout: UICollectionViewFlowLayout,
                      delegate: UICollectionViewDelegate? = nil,
                      dataSource: UICollectionViewDataSource? = nil,
-                     registerCells: [(AnyClass?, String)] = [],
-                     registerViews: [(AnyClass?, String, String)] = []) {
+                     registerCells: (AnyClass?, String)...,
+                     registerViews: (AnyClass?, String, String)...) {
         
         self.init(frame: .zero, collectionViewLayout: layout)
         
