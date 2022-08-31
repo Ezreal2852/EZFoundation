@@ -71,7 +71,7 @@ public extension UILabel {
 public extension UIButton {
     
     convenience init(font: UIFont? = nil,
-                     targetAction:(Any?, Selector)? = nil,
+                     targetAction: (Any?, Selector)? = nil,
                      titleStates: (String?, UIControl.State)...,
                      titleColorStates: (UIColor?, UIControl.State)...,
                      imageStates: (UIImage?, UIControl.State)...,
