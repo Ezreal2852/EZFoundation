@@ -9,7 +9,7 @@ import Foundation
 
 /**
  ```
- @UserDefault("key") var myInt = 0
+ @UserDefault("key") var myInt Int?
  ```
  */
 /// Save Objects in UserDefaults.standard with Property wrapper syntax

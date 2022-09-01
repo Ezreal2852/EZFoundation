@@ -9,12 +9,12 @@ import UIKit
 import EZFoundation
 
 class ViewController: UIViewController {
+    
+    @UserDefault("kMyInt") var myInt: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
-
 }
 
