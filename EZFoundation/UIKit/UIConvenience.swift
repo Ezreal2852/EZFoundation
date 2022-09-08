@@ -111,7 +111,7 @@ public extension UITextField {
     }
 }
 
-public extension EZTextView {
+public extension PlaceholderTextView {
     
     convenience init(font: UIFont? = nil,
                      text: String? = nil,

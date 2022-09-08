@@ -10,7 +10,7 @@ import UIKit
 
 /// 自带placeholder的派生TextView
 @IBDesignable
-open class EZTextView: UITextView {
+open class PlaceholderTextView: UITextView {
     
     private struct Constants {
         static let defaultiOSPlaceholderColor = UIColor(red: 0.0, green: 0.0, blue: 0.0980392, alpha: 0.22)
@@ -28,7 +28,7 @@ open class EZTextView: UITextView {
         }
     }
     
-    @IBInspectable open var placeholderColor: UIColor = EZTextView.Constants.defaultiOSPlaceholderColor {
+    @IBInspectable open var placeholderColor: UIColor = PlaceholderTextView.Constants.defaultiOSPlaceholderColor {
         didSet {
             placeholderLabel.textColor = placeholderColor
         }
