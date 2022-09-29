@@ -11,7 +11,7 @@ import ObjectiveC
 /// - Parameters:
 ///   - obj: 被锁定的对象
 ///   - `do`: 执行安全访问操作
-public func synchronized(_ obj: Any, `do`: (_ obj: Any) -> Void) {
+public func synchronized<T>(_ obj: T, `do`: (_ obj: T) -> Void) {
     objc_sync_enter(obj)
     `do`(obj)
     objc_sync_exit(obj)
