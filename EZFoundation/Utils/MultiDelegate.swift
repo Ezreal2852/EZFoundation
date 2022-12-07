@@ -30,19 +30,23 @@ public extension MultiDelegate {
     }
     
     func addDelegate(_ delegate: AnyObject) {
-        if delegates.contains(delegate) {
-            print(self, #function, delegate, "重复添加代理！")
-            return
+        synchronized(delegates) {
+            if $0.contains(delegate) {
+                print(self, #function, delegate, "重复添加代理！")
+                return
+            }
+            $0.add(delegate)
         }
-        synchronized(delegates) { $0.add(delegate) }
     }
     
-    /// 正常情况下，delegate不被引用，会自动释放(除单例外)，所以无需调用，但是释放后，delegate.count不会更新
+    /// 正常情况下，delegate不被引用，会自动释放(仅需主动移除代理的场景，如单例)，所以无需调用，但是释放后，delegates.count不会正确更新
     func removeDelegate(_ delegate: AnyObject) {
-        guard delegates.contains(delegate) else {
-            print(self, #function, delegate, "重复移除代理！")
-            return
+        synchronized(delegates) {
+            guard $0.contains(delegate) else {
+                print(self, #function, delegate, $0, "重复移除代理！")
+                return
+            }
+            $0.remove(delegate)
         }
-        synchronized(delegates) { $0.remove(delegate) }
     }
 }
