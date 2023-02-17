@@ -222,4 +222,29 @@ public extension UIView {
         layer.shadowOpacity = opacity
         layer.masksToBounds = false
     }
+    
+    /// 添加渐变圆角（基于frame）
+    func addGradientBorder(opacity: Float, colors: [UIColor], startPoint: CGPoint, endPoint: CGPoint, borderWidth: CGFloat, cornerRadius: CGFloat) {
+        let frame = self.bounds
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = frame
+        gradientLayer.opacity = opacity
+        gradientLayer.colors = colors.map({ $0.cgColor })
+        gradientLayer.startPoint = startPoint
+        gradientLayer.endPoint = endPoint
+        
+        let borderInset = borderWidth / 2.0
+        let maskFrame = CGRect(x: borderInset, y: borderInset, width: frame.width - borderInset, height: frame.height - borderInset)
+        
+        let maskLayer = CAShapeLayer()
+        maskLayer.lineWidth = borderWidth
+        maskLayer.path = UIBezierPath(roundedRect: maskFrame, cornerRadius: cornerRadius).cgPath
+        maskLayer.fillColor = UIColor.clear.cgColor
+        maskLayer.strokeColor = UIColor.black.cgColor
+        
+        gradientLayer.mask = maskLayer
+        
+        self.layer.addSublayer(gradientLayer)
+    }
 }
