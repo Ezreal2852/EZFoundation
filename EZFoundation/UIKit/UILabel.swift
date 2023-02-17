@@ -35,6 +35,22 @@ public extension UILabel {
     func setGgradient(startColor: UIColor, endColor: UIColor, startPoint: CGPoint, endPoint: CGPoint) {
         textColor = UIColor(patternImage: .gradient(size: requiredSize, startColor: startColor, endColor: endColor, startPoint: startPoint, endPoint: endPoint))
     }
+    
+    /// 切换字体，带动画，支持AutoLayout
+    /// - Parameters:
+    ///   - font: 目标字体
+    ///   - duration: 动画时长
+    func setFontAnimated(_ newFont: UIFont, duration: TimeInterval = 0.25) {
+        let pointScale = font.pointSize / newFont.pointSize
+        font = newFont
+        let oldTransform = transform
+        transform = oldTransform.scaledBy(x: pointScale, y: pointScale)
+        setNeedsUpdateConstraints()
+        UIView.animate(withDuration: duration) { [self] in
+            transform = oldTransform
+            layoutIfNeeded()
+        }
+    }
 }
 
 #endif
