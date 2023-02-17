@@ -32,4 +32,36 @@ public extension UIImage {
         
         return image
     }
+    
+    /// 高斯模糊
+    /// - Parameter radius: 模糊半径
+    func gaussianBlur(radius: CGFloat = 20) -> UIImage? {
+        guard let cgImage = cgImage else { return nil }
+        let ciImage = CIImage(cgImage: cgImage)
+        
+        guard let filter = CIFilter(name: "CIGaussianBlur") else { return nil }
+        filter.setDefaults()
+        filter.setValue(ciImage, forKey: kCIInputImageKey)
+        filter.setValue(NSNumber(floatLiteral: radius), forKey: kCIInputRadiusKey)
+        
+        guard let resultCiImage = filter.value(forKey: kCIOutputImageKey) as? CIImage,
+              let resultCgImage = CIContext().createCGImage(resultCiImage, from: ciImage.extent) else {
+            return nil
+        }
+        
+        return UIImage(cgImage: resultCgImage)
+    }
+    
+    /// 高斯模糊，但是异步
+    /// - Parameters:
+    ///   - radius: 模糊半径
+    ///   - compeltion: 回调
+    func gaussianBlur(radius: CGFloat = 20, compeltion: ((UIImage?) -> Void)?) {
+        DispatchQueue.global().async { [weak self] in
+            let result = self?.gaussianBlur(radius: radius)
+            DispatchQueue.main.async {
+                compeltion?(result)
+            }
+        }
+    }
 }
