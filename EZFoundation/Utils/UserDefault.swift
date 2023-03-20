@@ -4,6 +4,7 @@
 //
 //  Created by 刘嘉豪 on 2022/8/24.
 //
+//  ⚠️在SwiftUI中，直接使用@AppStorage即可。
 
 import Foundation
 
