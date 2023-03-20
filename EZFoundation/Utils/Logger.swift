@@ -4,6 +4,7 @@
 //
 //  Created by 刘嘉豪 on 2023/2/17.
 //
+//  dependency "CocoaLumberjack/Swift", '~> 3.7.4'
 
 #if canImport(CocoaLumberjack)
 
