@@ -105,8 +105,12 @@ public extension UITextField {
         self.textColor = textColor
         self.delegate = delegate
         
-        if let placeholder = placeholder, let placeholderColor = placeholderColor {
-            self.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [.foregroundColor: placeholderColor])
+        if let placeholder = placeholder {
+            if let placeholderColor = placeholderColor {
+                self.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [.foregroundColor: placeholderColor])
+            } else {
+                self.placeholder = placeholder
+            }
         }
     }
 }
