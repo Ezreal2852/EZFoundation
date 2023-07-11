@@ -5,6 +5,8 @@
 //  Created by 刘嘉豪 on 2022/12/7.
 //
 
+//MARK: -
+
 infix operator ?=
 
 func ?=<T> (_ self: inout T, optionl: T?) {
@@ -32,4 +34,36 @@ fileprivate func testOptionl() {
     int ?= optionlInt
     
     print(#function, string, int) // "6", 6
+}
+
+//MARK: -
+
+infix operator &&=
+
+func &&= (_ lhs: inout Bool, rhs: @autoclosure () -> Bool) {
+    lhs = lhs && rhs()
+}
+
+fileprivate func testAnd() {
+    var flag = true
+    let and = false
+    flag = flag && and
+    // ⬆️ == ⬇️
+    flag &&= and
+}
+
+//MARK: -
+
+infix operator ||=
+
+func ||= (_ lhs: inout Bool, rhs: @autoclosure () -> Bool) {
+    lhs = lhs || rhs()
+}
+
+fileprivate func testOr() {
+    var flag = false
+    let or = true
+    flag = flag || or
+    // ⬆️ == ⬇️
+    flag ||= or
 }
